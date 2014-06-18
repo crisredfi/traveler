@@ -13,6 +13,8 @@
 		F0BF3A371950BE9200D404AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BF3A351950BE9200D404AA /* Main.storyboard */; };
 		F0BF3A391950BE9200D404AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0BF3A381950BE9200D404AA /* Images.xcassets */; };
 		F0BF3A451950BE9200D404AA /* TravelerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3A441950BE9200D404AA /* TravelerTests.swift */; };
+		F0BF3A511950D4C400D404AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3A501950D4C400D404AA /* MainViewController.swift */; };
+		F0BF3A531950D6CE00D404AA /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3A521950D6CE00D404AA /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 		F0BF3A3E1950BE9200D404AA /* TravelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BF3A431950BE9200D404AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0BF3A441950BE9200D404AA /* TravelerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelerTests.swift; sourceTree = "<group>"; };
+		F0BF3A501950D4C400D404AA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F0BF3A521950D6CE00D404AA /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		F0BF3A541950E3DE00D404AA /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,9 @@
 				F0BF3A351950BE9200D404AA /* Main.storyboard */,
 				F0BF3A381950BE9200D404AA /* Images.xcassets */,
 				F0BF3A2D1950BE9200D404AA /* Supporting Files */,
+				F0BF3A501950D4C400D404AA /* MainViewController.swift */,
+				F0BF3A521950D6CE00D404AA /* CircleView.swift */,
+				F0BF3A541950E3DE00D404AA /* MyPlayground.playground */,
 			);
 			path = Traveler;
 			sourceTree = "<group>";
@@ -212,8 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0BF3A341950BE9200D404AA /* DetailViewController.swift in Sources */,
+				F0BF3A531950D6CE00D404AA /* CircleView.swift in Sources */,
 				F0BF3A321950BE9200D404AA /* MasterViewController.swift in Sources */,
 				F0BF3A301950BE9200D404AA /* AppDelegate.swift in Sources */,
+				F0BF3A511950D4C400D404AA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +411,7 @@
 				F0BF3A4A1950BE9200D404AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0BF3A4B1950BE9200D404AA /* Build configuration list for PBXNativeTarget "TravelerTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +420,7 @@
 				F0BF3A4D1950BE9200D404AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
