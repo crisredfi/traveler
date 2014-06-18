@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MyCircleView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Traveler.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +17,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>F0BF3A291950BE9200D404AA</key>
+		<key>F0AD9A7F195215D4008DD4DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0BF3A3D1950BE9200D404AA</key>
+		<key>F0AD9A91195215D4008DD4DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0AD9AAB195217BF008DD4DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0AD9AB5195217C0008DD4DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

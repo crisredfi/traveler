@@ -1,14 +1,14 @@
 //
-//  TravelerTests.swift
-//  TravelerTests
+//  MyCircleViewTests.swift
+//  MyCircleViewTests
 //
-//  Created by Crisredfi on 17/06/14.
+//  Created by Crisredfi on 18/06/14.
 //  Copyright (c) 2014 crisredfi. All rights reserved.
 //
 
 import XCTest
 
-class TravelerTests: XCTestCase {
+class MyCircleViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
