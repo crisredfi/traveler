@@ -13,12 +13,12 @@ import QuartzCore
 @IBDesignable class GradientRotatedView: UIView {
     
     let gradient : CAGradientLayer = CAGradientLayer();
-
+    
     @IBInspectable
     var mainColor : UIColor = UIColor.redColor() {
-        didSet {
+    didSet {
         redrawBackgroundColor()
-        }
+    }
     }
     @IBInspectable
     var midColor : UIColor = UIColor.blueColor() {
@@ -47,15 +47,11 @@ import QuartzCore
     
     override func prepareForInterfaceBuilder()  {
         redrawBackgroundColor()
-
     }
     
-
-
     func redrawBackgroundColor() {
         
         self.gradient.removeFromSuperlayer();
-        
         gradient.frame = bounds;
         gradient.startPoint = CGPointMake(1, 1)
         gradient.endPoint = CGPointMake(0, 0)
