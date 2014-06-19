@@ -92,7 +92,7 @@
             </objects>
             <point key="canvasLocation" x="980" y="211"/>
         </scene>
-        <!--Travel Detail View Controller-->
+        <!--Travel Detail View Controller - Detail-->
         <scene sceneID="DMt-ri-LdH">
             <objects>
                 <viewController id="Pc8-Uh-k5H" customClass="TravelDetailViewController" customModule="Traveler" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,32 +100,86 @@
                         <viewControllerLayoutGuide type="top" id="HAQ-Ej-BGJ"/>
                         <viewControllerLayoutGuide type="bottom" id="WIN-c7-BnZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="thT-Ha-nuA">
+                    <view key="view" contentMode="scaleToFill" id="thT-Ha-nuA" customClass="GradientRotatedView" customModule="MyCircleView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-jl-Cpz">
-                                <rect key="frame" x="20" y="115" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-5C-x8H">
-                                <rect key="frame" x="0.0" y="317" width="320" height="251"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Pc8-Uh-k5H" id="a5m-Zk-7xI"/>
-                                </connections>
-                            </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aleix" translatesAutoresizingMaskIntoConstraints="NO" id="BFM-fQ-jZM">
-                                <rect key="frame" x="9" y="83" width="302" height="217"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-jp-KWv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="554"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aleix Guri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-jl-Cpz">
+                                        <rect key="frame" x="117" y="27" width="183" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-5C-x8H">
+                                        <rect key="frame" x="0.0" y="256" width="320" height="251"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Pc8-Uh-k5H" id="a5m-Zk-7xI"/>
+                                        </connections>
+                                    </mapView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPU-Oj-cw8" customClass="CircleView" customModule="MyCircleView">
+                                        <rect key="frame" x="20" y="20" width="89" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="saturation">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="aleix.png"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stage : Dublin - Cork" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B32-sU-e86">
+                                        <rect key="frame" x="20" y="108" width="287" height="42"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance: 350 km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sg-Jn-SQe">
+                                        <rect key="frame" x="20" y="143" width="280" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elapsed Time: 3h:30m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrp-Oe-XnT">
+                                        <rect key="frame" x="20" y="172" width="280" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aprox. petrol consumption: 16L" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-8r-Q4H">
+                                        <rect key="frame" x="20" y="196" width="280" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost aprox: 30 €" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0N-X2-7IB">
+                                        <rect key="frame" x="20" y="218" width="280" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                <color key="value" red="0.25822041436175858" green="0.95108695652173914" blue="0.93987381305926676" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="midColor">
+                                <color key="value" red="0.13203944786956354" green="0.88631538722826086" blue="0.42434880697802646" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lastColor">
+                                <color key="value" red="0.27653899634648849" green="1" blue="0.55779230299517957" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="NZ4-4z-bgU"/>
+                    <navigationItem key="navigationItem" title="Detail" id="NZ4-4z-bgU"/>
                     <connections>
-                        <outlet property="testImageView" destination="BFM-fQ-jZM" id="yjG-oS-A58"/>
+                        <outlet property="detailScrollView" destination="ffl-jp-KWv" id="gwn-v4-UNW"/>
                         <outlet property="travelMapView" destination="OPn-5C-x8H" id="FlW-ze-EnP"/>
+                        <outlet property="userImageView" destination="VPU-Oj-cw8" id="c7O-f4-teY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsH-ei-eOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +207,7 @@
     </scenes>
     <resources>
         <image name="aleix" width="470" height="456"/>
+        <image name="aleix.png" width="470" height="456"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -8,13 +8,16 @@
 
 import UIKit
 import MapKit
+import MyCircleView
+
 
 
 
 class TravelDetailViewController: UIViewController , CLLocationManagerDelegate {
 
     @IBOutlet var travelMapView : MKMapView
-    @IBOutlet var testImageView: UIImageView
+    @IBOutlet var userImageView: CircleView
+    @IBOutlet var detailScrollView: UIScrollView
     var locationManager = CLLocationManager();
 
     override func viewDidLoad() {
@@ -22,8 +25,9 @@ class TravelDetailViewController: UIViewController , CLLocationManagerDelegate {
         
         var effect = UIBlurEffect(style: UIBlurEffectStyle.Light);
         var visualEffect = UIVisualEffectView(effect: effect);
-        visualEffect.frame = testImageView.bounds;
-        testImageView.addSubview(visualEffect);
+        visualEffect.frame = userImageView.bounds;
+        detailScrollView.contentSize = CGSizeMake(320, 800);
+      //  userImageView.addSubview(visualEffect);
         // Do any additional setup after loading the view.
         let status = CLLocationManager.authorizationStatus()
         
