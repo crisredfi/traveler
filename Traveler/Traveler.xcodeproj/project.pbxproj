@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0F8B231952D10700F66E3E /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */; };
+		AB2A2DF5195325B000149CA5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2A2DF4195325B000149CA5 /* MapKit.framework */; };
 		F0AD9A86195215D4008DD4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9A85195215D4008DD4DC /* AppDelegate.swift */; };
 		F0AD9A88195215D4008DD4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9A87195215D4008DD4DC /* ViewController.swift */; };
 		F0AD9A8B195215D4008DD4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AD9A89195215D4008DD4DC /* Main.storyboard */; };
@@ -88,6 +90,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDetailViewController.swift; sourceTree = "<group>"; };
+		AB2A2DF4195325B000149CA5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F0AD9A80195215D4008DD4DC /* Traveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AD9A84195215D4008DD4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AD9A85195215D4008DD4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2A2DF5195325B000149CA5 /* MapKit.framework in Frameworks */,
 				F0AD9AC1195217C0008DD4DC /* MyCircleView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +149,7 @@
 		F0AD9A77195215D4008DD4DC = {
 			isa = PBXGroup;
 			children = (
+				AB2A2DF4195325B000149CA5 /* MapKit.framework */,
 				F0AD9A82195215D4008DD4DC /* Traveler */,
 				F0AD9A95195215D4008DD4DC /* TravelerTests */,
 				F0AD9AAD195217BF008DD4DC /* MyCircleView */,
@@ -170,6 +176,7 @@
 				F0AD9A85195215D4008DD4DC /* AppDelegate.swift */,
 				F0AD9A87195215D4008DD4DC /* ViewController.swift */,
 				F0AD9A89195215D4008DD4DC /* Main.storyboard */,
+				AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */,
 				F0AD9A8C195215D4008DD4DC /* Images.xcassets */,
 				F0AD9AA51952163F008DD4DC /* aleix.png */,
 				F0AD9A83195215D4008DD4DC /* Supporting Files */,
@@ -346,6 +353,11 @@
 				TargetAttributes = {
 					F0AD9A7F195215D4008DD4DC = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F0AD9A91195215D4008DD4DC = {
 						CreatedOnToolsVersion = 6.0;
@@ -421,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AD9A88195215D4008DD4DC /* ViewController.swift in Sources */,
+				AB0F8B231952D10700F66E3E /* TravelDetailViewController.swift in Sources */,
 				F0AD9A86195215D4008DD4DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +747,7 @@
 				F0AD9A9E195215D4008DD4DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0AD9A9F195215D4008DD4DC /* Build configuration list for PBXNativeTarget "TravelerTests" */ = {
 			isa = XCConfigurationList;
@@ -742,6 +756,7 @@
 				F0AD9AA1195215D4008DD4DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0AD9AC5195217C0008DD4DC /* Build configuration list for PBXNativeTarget "MyCircleView" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +765,7 @@
 				F0AD9AC7195217C0008DD4DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0AD9AC9195217C0008DD4DC /* Build configuration list for PBXNativeTarget "MyCircleViewTests" */ = {
 			isa = XCConfigurationList;
@@ -758,6 +774,7 @@
 				F0AD9ACB195217C0008DD4DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
