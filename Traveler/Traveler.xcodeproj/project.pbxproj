@@ -114,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2A2DF5195325B000149CA5 /* MapKit.framework in Frameworks */,
 				F0AD9AC1195217C0008DD4DC /* MyCircleView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +147,7 @@
 		F0AD9A77195215D4008DD4DC = {
 			isa = PBXGroup;
 			children = (
+				AB2A2DF4195325B000149CA5 /* MapKit.framework */,
 				F0AD9A82195215D4008DD4DC /* Traveler */,
 				F0AD9A95195215D4008DD4DC /* TravelerTests */,
 				F0AD9AAD195217BF008DD4DC /* MyCircleView */,
@@ -172,6 +174,7 @@
 				F0AD9A85195215D4008DD4DC /* AppDelegate.swift */,
 				F0AD9A87195215D4008DD4DC /* ViewController.swift */,
 				F0AD9A89195215D4008DD4DC /* Main.storyboard */,
+				AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */,
 				F0AD9A8C195215D4008DD4DC /* Images.xcassets */,
 				F0AD9AA51952163F008DD4DC /* aleix.png */,
 				F0AD9A83195215D4008DD4DC /* Supporting Files */,
@@ -349,6 +352,11 @@
 				TargetAttributes = {
 					F0AD9A7F195215D4008DD4DC = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F0AD9A91195215D4008DD4DC = {
 						CreatedOnToolsVersion = 6.0;
@@ -424,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AD9A88195215D4008DD4DC /* ViewController.swift in Sources */,
+				AB0F8B231952D10700F66E3E /* TravelDetailViewController.swift in Sources */,
 				F0AD9A86195215D4008DD4DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
