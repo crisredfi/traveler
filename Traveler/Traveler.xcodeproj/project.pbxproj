@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0F8B231952D10700F66E3E /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */; };
+		AB2A2DF5195325B000149CA5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2A2DF4195325B000149CA5 /* MapKit.framework */; };
 		F09A748119521C11001FDF7D /* GradientRotatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A748019521C11001FDF7D /* GradientRotatedView.swift */; };
 		F0AD9A86195215D4008DD4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9A85195215D4008DD4DC /* AppDelegate.swift */; };
 		F0AD9A88195215D4008DD4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9A87195215D4008DD4DC /* ViewController.swift */; };
@@ -72,6 +74,13 @@
 			remoteGlobalIDString = F0AD9AAB195217BF008DD4DC;
 			remoteInfo = MyCircleView;
 		};
+		F0B8B4E9195348D000D8F38D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0AD9A78195215D4008DD4DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0AD9AAB195217BF008DD4DC;
+			remoteInfo = MyCircleView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +98,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDetailViewController.swift; sourceTree = "<group>"; };
+		AB2A2DF4195325B000149CA5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F09A748019521C11001FDF7D /* GradientRotatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientRotatedView.swift; sourceTree = "<group>"; };
 		F0AD9A80195215D4008DD4DC /* Traveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AD9A84195215D4008DD4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,6 +346,7 @@
 				F0AD9ACD195217C0008DD4DC /* PBXTargetDependency */,
 				F0AD9ACF195217C0008DD4DC /* PBXTargetDependency */,
 				F0AD9AD1195217C2008DD4DC /* PBXTargetDependency */,
+				F0B8B4EA195348D000D8F38D /* PBXTargetDependency */,
 			);
 			name = MyCircleViewTests;
 			productName = MyCircleViewTests;
@@ -499,6 +511,11 @@
 			isa = PBXTargetDependency;
 			target = F0AD9AAB195217BF008DD4DC /* MyCircleView */;
 			targetProxy = F0AD9AD0195217C2008DD4DC /* PBXContainerItemProxy */;
+		};
+		F0B8B4EA195348D000D8F38D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0AD9AAB195217BF008DD4DC /* MyCircleView */;
+			targetProxy = F0B8B4E9195348D000D8F38D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

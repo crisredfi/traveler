@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C5a-UF-s69">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HZf-E4-Y3V">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
@@ -77,34 +77,78 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="nJd-Dn-Llj"/>
+                    <navigationItem key="navigationItem" id="A8p-Xw-LKT"/>
                     <connections>
-                        <outlet property="travelTableVIew" destination="5VI-c0-k9g" id="jrW-hm-ifR"/>
+                        <outlet property="tripsTableView" destination="6Hq-mU-WJd" id="AAY-e0-mrH"/>
+                        <segue destination="Pc8-Uh-k5H" kind="push" identifier="detailViewSegue" id="8jK-oa-p01"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="141"/>
+            <point key="canvasLocation" x="980" y="211"/>
+        </scene>
+        <!--Travel Detail View Controller-->
+        <scene sceneID="DMt-ri-LdH">
+            <objects>
+                <viewController id="Pc8-Uh-k5H" customClass="TravelDetailViewController" customModule="Traveler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HAQ-Ej-BGJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="WIN-c7-BnZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="thT-Ha-nuA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-jl-Cpz">
+                                <rect key="frame" x="20" y="115" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-5C-x8H">
+                                <rect key="frame" x="0.0" y="317" width="320" height="251"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pc8-Uh-k5H" id="a5m-Zk-7xI"/>
+                                </connections>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aleix" translatesAutoresizingMaskIntoConstraints="NO" id="BFM-fQ-jZM">
+                                <rect key="frame" x="9" y="83" width="302" height="217"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NZ4-4z-bgU"/>
+                    <connections>
+                        <outlet property="testImageView" destination="BFM-fQ-jZM" id="P8d-KS-6jE"/>
+                        <outlet property="travelMapView" destination="OPn-5C-x8H" id="FlW-ze-EnP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsH-ei-eOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="211"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="7mf-gD-EbI">
+        <scene sceneID="qxX-Pj-Qnd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C5a-UF-s69" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HZf-E4-Y3V" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WUz-60-v10">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1VI-wv-qh5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="le6-Le-zzx"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="d7c-J3-tss"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fHC-7m-9YN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwF-sr-fdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="-505"/>
+            <point key="canvasLocation" x="448" y="211"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aleix" width="470" height="456"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
