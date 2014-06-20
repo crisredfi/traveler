@@ -114,9 +114,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-5C-x8H">
-                                        <rect key="frame" x="0.0" y="256" width="320" height="251"/>
+                                        <rect key="frame" x="0.0" y="256" width="320" height="298"/>
                                         <connections>
-                                            <outlet property="delegate" destination="Pc8-Uh-k5H" id="a5m-Zk-7xI"/>
+                                            <outlet property="delegate" destination="Pc8-Uh-k5H" id="Ubo-De-Wes"/>
                                         </connections>
                                     </mapView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPU-Oj-cw8" customClass="CircleView" customModule="MyCircleView">
