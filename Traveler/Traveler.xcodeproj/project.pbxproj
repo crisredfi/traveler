@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AB0F8B231952D10700F66E3E /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */; };
 		AB2A2DF5195325B000149CA5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2A2DF4195325B000149CA5 /* MapKit.framework */; };
+		BE6A06B71A948C0C00DC7EFD /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F8B221952D10700F66E3E /* TravelDetailViewController.swift */; };
+		BE6A06B81A948C1C00DC7EFD /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9AD319521852008DD4DC /* CircleView.swift */; };
+		BE6A06B91A948C1E00DC7EFD /* GradientRotatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A748019521C11001FDF7D /* GradientRotatedView.swift */; };
 		F09A748119521C11001FDF7D /* GradientRotatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A748019521C11001FDF7D /* GradientRotatedView.swift */; };
 		F0AD9A86195215D4008DD4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9A85195215D4008DD4DC /* AppDelegate.swift */; };
 		F0AD9A88195215D4008DD4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD9A87195215D4008DD4DC /* ViewController.swift */; };
@@ -451,7 +454,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6A06B81A948C1C00DC7EFD /* CircleView.swift in Sources */,
 				F0AD9A88195215D4008DD4DC /* ViewController.swift in Sources */,
+				BE6A06B91A948C1E00DC7EFD /* GradientRotatedView.swift in Sources */,
 				AB0F8B231952D10700F66E3E /* TravelDetailViewController.swift in Sources */,
 				F0AD9A86195215D4008DD4DC /* AppDelegate.swift in Sources */,
 			);
@@ -470,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F09A748119521C11001FDF7D /* GradientRotatedView.swift in Sources */,
+				BE6A06B71A948C0C00DC7EFD /* TravelDetailViewController.swift in Sources */,
 				F0AD9AD419521852008DD4DC /* CircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

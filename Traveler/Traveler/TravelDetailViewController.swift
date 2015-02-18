@@ -14,21 +14,21 @@ import MyCircleView
 
 
 class TravelDetailViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
-
-    @IBOutlet var travelMapView : MKMapView
-    @IBOutlet var userImageView: CircleView
-    @IBOutlet var detailScrollView: UIScrollView
+    
+    @IBOutlet var travelMapView : MKMapView!
+    @IBOutlet var userImageView: CircleView?
+    @IBOutlet var detailScrollView: UIScrollView!
     var locationManager = CLLocationManager();
-    var directions = MKDirectionsRequest();
+    let directions = MKDirectionsRequest();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var effect = UIBlurEffect(style: UIBlurEffectStyle.Light);
         var visualEffect = UIVisualEffectView(effect: effect);
-        visualEffect.frame = userImageView.bounds;
-        detailScrollView.contentSize = CGSizeMake(320, 800);
-      //  userImageView.addSubview(visualEffect);
+        //        visualEffect.frame = userImageView?.bounds;
+        //        detailScrollView?.contentSize = CGSizeMake(320, 800);
+        //        userImageView.addSubview(visualEffect);
         // Do any additional setup after loading the view.
         let status = CLLocationManager.authorizationStatus()
         
@@ -37,7 +37,7 @@ class TravelDetailViewController: UIViewController , CLLocationManagerDelegate, 
             locationManager.startUpdatingLocation();
             
         }
-        travelMapView.showsUserLocation = true;
+        travelMapView?.showsUserLocation = true;
         locationManager.startUpdatingLocation();
         
         
@@ -50,70 +50,62 @@ class TravelDetailViewController: UIViewController , CLLocationManagerDelegate, 
         directions.requestsAlternateRoutes = false;
         var dir = MKDirections(request: directions)
         
-        dir.calculateDirectionsWithCompletionHandler {response, error in
-            if (!error) {
-                self.showRoute(response);
+        
+        dir.calculateDirectionsWithCompletionHandler({(response:
+            MKDirectionsResponse!, error: NSError!) in
+            
+            if error != nil {
+                // Handle error
+            } else {
+                self.showRoute(response)
             }
-        }
-//        dir.calculateDirectionsWithCompletionHandler(MKDirectionsHandler {})
+            
+        })//        dir.calculateDirectionsWithCompletionHandler(MKDirectionsHandler {})
         
         
         
-//  dir.calculateDirectionsWithCompletionHandler(completionHandler:{((MKDirectionsResponse!, NSError!) -> Void) in  println("red box has faded out") })
-
+        //  dir.calculateDirectionsWithCompletionHandler(completionHandler:{((MKDirectionsResponse!, NSError!) -> Void) in  println("red box has faded out") })
+        
     }
     
     
     func showRoute(response:MKDirectionsResponse) {
-        for route : MKRoute! in response.routes
+        for route:MKRoute in response.routes as [MKRoute]
         {
             travelMapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
-            for step : MKRouteStep! in route.steps {
-                println(step.instructions )
-            }
-
-//            travelMapView.addOverlays(response.routes, level: MKOverlayLevel)
-//            [_routeMap
-//                addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
-//            
-//            for (MKRouteStep *step in route.steps)
-//            {
-//                NSLog(@"%@", step.instructions);
-//            }
         }
     }
- 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
-        
-        var renderer = MKPolylineRenderer(overlay: overlay!);
-        renderer.strokeColor = UIColor.blueColor();
-        renderer.lineWidth = 5.0;
-        return renderer;
-        
+    func mapView(mapView: MKMapView!, rendererForOverlay
+        overlay: MKOverlay!) -> MKOverlayRenderer! {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            
+            renderer.strokeColor = UIColor.blueColor()
+            renderer.lineWidth = 5.0
+            return renderer
     }
     
     
     
-    
-     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!)
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!)
     {
         
     }
-
+    
     /*
     // #pragma mark - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -8,9 +8,10 @@
 
 import UIKit
 
+
 class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource  {
     
-    @IBOutlet var travelTableVIew: UITableView
+    @IBOutlet var travelTableVIew: UITableView?
     var objects = NSMutableArray()
     
     override func viewDidLoad() {
@@ -19,30 +20,32 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         // Do any additional setup after loading the view, typically from a nib.
         objects.addObject("one");
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count;
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        
-//        let object = objects[indexPath.row]
-        cell.textLabel.text = "test";
+        cell.textLabel?.text = "test";
         return cell;
+        
     }
-       
+    
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
         self.performSegueWithIdentifier("detailViewSegue", sender: self);
         
+        
     }
-
+    
 }
 

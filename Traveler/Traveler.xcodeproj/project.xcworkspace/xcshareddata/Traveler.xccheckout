@@ -10,31 +10,31 @@
 	<string>Traveler</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>901C9039-A1C7-4EB0-B3A3-E83BD557B2B0</key>
+		<key>592FB15AE42F004F741DC0F921F965C318138D96</key>
 		<string>https://github.com/crisredfi/traveler.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Traveler/Traveler.xcodeproj/project.xcworkspace</string>
+	<string>Traveler/Traveler.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>901C9039-A1C7-4EB0-B3A3-E83BD557B2B0</key>
+		<key>592FB15AE42F004F741DC0F921F965C318138D96</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/crisredfi/traveler.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>901C9039-A1C7-4EB0-B3A3-E83BD557B2B0</string>
+	<string>592FB15AE42F004F741DC0F921F965C318138D96</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>901C9039-A1C7-4EB0-B3A3-E83BD557B2B0</string>
+			<string>592FB15AE42F004F741DC0F921F965C318138D96</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Traveler</string>
+			<string>traveler</string>
 		</dict>
 	</array>
 </dict>

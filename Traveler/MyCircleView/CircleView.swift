@@ -12,9 +12,9 @@ import UIKit
 @IBDesignable class CircleView: UIView {
     @IBInspectable
     var image : UIImage? {
-    didSet {
-        refreshImage()
-    }
+        didSet {
+            refreshImage()
+        }
     }
     
     @IBInspectable
@@ -46,8 +46,14 @@ import UIKit
         }
     }
     func refreshImage() {
-        imageView.image = image ? prepareImage(image!, saturation: saturation) : nil;
-        backgroundColor = image ? nil : UIColor.whiteColor();
+        
+        if ((image) != nil) {
+            imageView.image = prepareImage(image!, saturation: saturation);
+            backgroundColor = (UIColor.whiteColor());
+        } else {
+            imageView.image = nil;
+            backgroundColor = nil;
+        }
     }
     
     var imageView : UIImageView
@@ -56,12 +62,12 @@ import UIKit
         setupImage()
     }
     func setupImage() {
-        if !image {
+        if !(image != nil) {
             image = UIImage(named: "aleix", inBundle: NSBundle(forClass: CircleView.self), compatibleWithTraitCollection: nil)
         }
     }
     
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         
         imageView = UIImageView(frame:CGRectZero)
         super.init(frame: frame)
@@ -69,7 +75,7 @@ import UIKit
         addSubview(imageView)
         // Initialization code
     }
-    init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder)  {
         imageView = UIImageView(frame:CGRectZero)
         super.init(coder: aDecoder)
         setupImage()

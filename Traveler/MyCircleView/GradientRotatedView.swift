@@ -34,15 +34,15 @@ import QuartzCore
     }
     
    
-    init(frame: CGRect) {
+   override init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
         redrawBackgroundColor()
     }
     
-    init(coder aDecoder: NSCoder!)  {
+   required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
-        redrawBackgroundColor()        
+        redrawBackgroundColor()
     }
     
     override func prepareForInterfaceBuilder()  {
